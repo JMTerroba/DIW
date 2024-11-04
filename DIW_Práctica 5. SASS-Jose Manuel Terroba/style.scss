@@ -99,9 +99,26 @@ aside:nth-of-type(6) {
 }
 
 // Estilo para los colores
+
+.red {
+    background-color: #FF0000;
+}
+
+.green {
+    background-color: #00FF00;
+}
+
+.blue {
+    background-color: #0000FF;
+}
+
+.yellow {
+    background-color: #FFFF00;
+}
+
 .color-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     margin-bottom: 20px;
     justify-content: space-between;
 }
@@ -142,8 +159,6 @@ aside:nth-of-type(6) {
 .color-info .value {
     text-align: right;
 }
-
-//Aqui termina el Css de redes Sociales
 
 // Estilo para las tonalidades
 .tonalidades-container {
@@ -272,7 +287,7 @@ footer {
     margin-top: 20px;
     padding: 20px;
     background-color: pink;
-    color: rgb(3, 3, 3);
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -411,6 +411,22 @@ aside:nth-of-type(6) {
   display: flex;
 }
 
+.red {
+  background-color: #FF0000;
+}
+
+.green {
+  background-color: #00FF00;
+}
+
+.blue {
+  background-color: #0000FF;
+}
+
+.yellow {
+  background-color: #FFFF00;
+}
+
 .color-container {
   display: flex;
   flex-direction: row;
@@ -585,7 +601,7 @@ footer {
   margin-top: 20px;
   padding: 20px;
   background-color: pink;
-  color: rgb(3, 3, 3);
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
