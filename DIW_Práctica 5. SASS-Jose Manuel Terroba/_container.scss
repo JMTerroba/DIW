@@ -1,12 +1,4 @@
-// mixins.scss
 @import 'variables';
-
-// Mixin para ajustar contenedores
-@mixin container-adjustment($bg-color) {
-    background-color: $bg-color;
-    padding: 15px;
-    border-radius: 5px;
-}
 
 // Mixin para asignar color dinámico
 @mixin dynamic-color($color) {

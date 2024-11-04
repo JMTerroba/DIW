@@ -101,14 +101,14 @@ aside:nth-of-type(6) {
 // Estilo para los colores
 .color-container {
     display: flex;
-    flex-direction: row; // Cambiado a 'row' para mostrar de izquierda a derecha
+    flex-direction: row;
     margin-bottom: 20px;
     justify-content: space-between;
 }
 
 .color-box {
     display: flex;
-    flex-direction: column; // Cambia a columna para mantener la info debajo del color
+    flex-direction: column;
     align-items: center;
     margin: 0 10px;
 }
@@ -121,8 +121,8 @@ aside:nth-of-type(6) {
 
 .color-info {
     display: grid;
-    grid-template-columns: 100px 1; // Dos columnas: una para el título y otra para el valor
-    gap: 5px 10px; // Espacio entre filas y columnas
+    grid-template-columns: 100px 1; 
+    gap: 5px 10px; 
     width: 100%;
     font-size: 0.9rem;
     margin-top: 10px;
@@ -161,7 +161,7 @@ aside:nth-of-type(6) {
 
     .tonalidad {
         flex: 1; // Hacer que cada tonalidad ocupe el mismo espacio horizontalmente
-        height: 50px; // Aumenta la altura de cada tonalidad
+        height: 50px; 
     }
 }
 
@@ -196,14 +196,12 @@ aside:nth-of-type(6) {
     padding: 20px;
 }
 
-// Estilo del título principal
 .titulo-principal {
     font-family: $fuente-abril-fatface;
     font-size: 2em;
     margin-bottom: 10px;
 }
 
-// Descripción de las tipografías
 .descripcion {
     font-size: 1em;
     margin-bottom: 20px;
@@ -273,26 +271,20 @@ aside:nth-of-type(6) {
 footer {
     margin-top: 20px;
     padding: 20px;
-    background-color: pink; /* Mismo fondo que el header */
-    color: rgb(3, 3, 3); /* Mismo color de texto que el header */
+    background-color: pink;
+    color: rgb(3, 3, 3);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column; /* Columnas para pantallas pequeñas */
+    flex-direction: column;
 
-    /* Efecto de enlace similar al header */
     a {
         font-size: 1rem;
         transition: color 0.3s;
     }
 
     a:hover {
-        color: #ff69b4; /* Color de hover igual que en nav */
-    }
-
-    /* Estructura para pantallas grandes */
-    @media (min-width: 768px) {
-        flex-direction: row; /* Cambia a fila en pantallas grandes */
+        color: #ff69b4;
     }
 }
 

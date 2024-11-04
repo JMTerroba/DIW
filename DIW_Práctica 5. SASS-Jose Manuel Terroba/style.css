@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -585,26 +584,19 @@ aside:nth-of-type(6) {
 footer {
   margin-top: 20px;
   padding: 20px;
-  background-color: pink; /* Mismo fondo que el header */
-  color: rgb(3, 3, 3); /* Mismo color de texto que el header */
+  background-color: pink;
+  color: rgb(3, 3, 3);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column; /* Columnas para pantallas pequeñas */
-  /* Efecto de enlace similar al header */
-  /* Estructura para pantallas grandes */
+  flex-direction: column;
 }
 footer a {
   font-size: 1rem;
   transition: color 0.3s;
 }
 footer a:hover {
-  color: #ff69b4; /* Color de hover igual que en nav */
-}
-@media (min-width: 768px) {
-  footer {
-    flex-direction: row; /* Cambia a fila en pantallas grandes */
-  }
+  color: #ff69b4;
 }
 
 .footer-content {
