@@ -1,0 +1,26 @@
+// mixins.scss
+@import 'variables';
+
+// Mixin para ajustar contenedores
+@mixin container-adjustment($bg-color) {
+    background-color: $bg-color;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+// Mixin para asignar color dinámico
+@mixin dynamic-color($color) {
+    @if $color == 'facebook' {
+        @include container-adjustment($color-facebook);
+    } @else if $color == 'twitter' {
+        @include container-adjustment($color-twitter);
+    } @else if $color == 'instagram' {
+        @include container-adjustment($color-instagram);
+    } @else if $color == 'linkedin' {
+        @include container-adjustment($color-linkedin);
+    } @else if $color == 'youtube' {
+        @include container-adjustment($color-youtube);
+    } @else if $color == 'tiktok' {
+        @include container-adjustment($color-tiktok);
+    }
+}

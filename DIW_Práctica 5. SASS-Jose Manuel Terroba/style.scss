@@ -1,0 +1,311 @@
+@import 'normalize';
+@import 'container';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Abril+Fatface&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: pink;
+
+    .logo {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .practicas {
+        display: flex;
+        flex-direction: column;
+        font-size: xx-large;
+        margin-top: auto;
+        margin-left: 5rem;
+    }
+}
+
+nav {
+    background-color: pink;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+nav .nav-link:hover {
+    color: #ff69b4;
+    background-color: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+
+        .practicas {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}
+
+//Aqui termina el css del Index
+
+// Aplicar mixin a cada contenedor. Aqui empieza el css de Redes_Sociales
+aside {
+    border: solid black 1px;
+    border-radius: 0 !important; //El important sirve para forzar a que se aplique el estilo pase lo que pase
+}
+
+aside {
+    @include dynamic-color('facebook');
+    margin: 0;
+}
+
+aside:nth-of-type(2) {
+    @include dynamic-color('twitter');
+}
+
+aside:nth-of-type(3) {
+    @include dynamic-color('instagram');
+}
+
+aside:nth-of-type(4) {
+    @include dynamic-color('linkedin');
+}
+
+aside:nth-of-type(5) {
+    @include dynamic-color('youtube');
+}
+
+aside:nth-of-type(6) {
+    @include dynamic-color('tiktok');
+}
+
+.card {
+    display: flex;
+}
+
+// Estilo para los colores
+.color-container {
+    display: flex;
+    flex-direction: row; // Cambiado a 'row' para mostrar de izquierda a derecha
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.color-box {
+    display: flex;
+    flex-direction: column; // Cambia a columna para mantener la info debajo del color
+    align-items: center;
+    margin: 0 10px;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.color-info {
+    display: grid;
+    grid-template-columns: 100px 1; // Dos columnas: una para el título y otra para el valor
+    gap: 5px 10px; // Espacio entre filas y columnas
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.color-info div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.color-info .label {
+    font-weight: bold;
+}
+
+.color-info .value {
+    text-align: right;
+}
+
+//Aqui termina el Css de redes Sociales
+
+// Estilo para las tonalidades
+.tonalidades-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.tonalidad-boxes {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+
+    .tonalidad {
+        flex: 1; // Hacer que cada tonalidad ocupe el mismo espacio horizontalmente
+        height: 50px; // Aumenta la altura de cada tonalidad
+    }
+}
+
+// Itera sobre las tonalidades (Este es un diccionario o mapa como lo quieras llamar) para cada color
+//Clave=$color-name
+//valores=$shades
+//Mapa=$tonalidades
+
+
+@each $color-name, $shades in $tonalidades {
+    .tonalidad-boxes-#{$color-name} {
+        @for $i from 1 through length($shades) {
+            .tonalidad:nth-child(#{$i}) {
+                background-color: nth($shades, $i);
+            }
+        }
+    }
+}
+
+//Este each crea una clase de cada color que a su vez aplica un for para ponerle color a los fondos
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+//Aqui termina el css de paleta
+
+
+//Aqui empieza el css de Fuente
+.contenedor-Fuente {
+    padding: 20px;
+}
+
+// Estilo del título principal
+.titulo-principal {
+    font-family: $fuente-abril-fatface;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+// Descripción de las tipografías
+.descripcion {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+// Estilos de cada titulo
+.nombre-fuente-Sans {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: $fuente-open-sans ;
+}
+
+.nombre-fuente-cursive {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: $fuente-abril-fatface;
+    font-style: italic;
+}
+
+
+// Color para "Aa"
+.color1 {
+    color: $color-1;
+}
+
+// Color para "Bb"
+.color2 {
+    color: $color-2;
+}
+
+// Color para "Cc"
+.color3 {
+    color: $color-3;
+}
+
+// Color para "Dd"
+.color4 {
+    color: $color-4;
+}
+
+// Color para "Numeros"
+.numeros {
+    color: $color-gris;
+}
+
+// Estilos para los títulos h1-h6
+.titulos {
+    .titulo-seccion {
+        font-family: $fuente-abril-fatface;
+        margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $fuente-abril-fatface;
+        margin: 0.5em 0;
+    }
+}
+
+//Aqui termina el css de fuentes
+
+//Footer
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: pink; /* Mismo fondo que el header */
+    color: rgb(3, 3, 3); /* Mismo color de texto que el header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Columnas para pantallas pequeñas */
+
+    /* Efecto de enlace similar al header */
+    a {
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #ff69b4; /* Color de hover igual que en nav */
+    }
+
+    /* Estructura para pantallas grandes */
+    @media (min-width: 768px) {
+        flex-direction: row; /* Cambia a fila en pantallas grandes */
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+}
