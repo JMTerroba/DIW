@@ -1,0 +1,79 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0;
+}
+ul li {
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  background-color: darkblue;
+  transition: background-color 0.3s;
+}
+ul li a:hover {
+  background-color: pink;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #3498db;
+}
+
+h2 {
+  color: pink;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #3498db;
+}
+
+h2 {
+  color: pink;
+}
+
+h1 {
+  background-color: pink;
+}
+
+body {
+  background-color: lightblue;
+}
+
+p {
+  background-color: pink;
+}
+
+.contenedor-hijo {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.contenedor-hijo img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+}
+.contenedor-hijo ul {
+  list-style: none;
+  padding: 0;
+}
+.contenedor-hijo .item-1:hover {
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+.contenedor-hijo .item-2:hover {
+  border: 1px solid rgba(255, 0, 0, 0.4);
+}
+.contenedor-hijo .item-3:hover {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}/*# sourceMappingURL=Ejercicios.css.map */

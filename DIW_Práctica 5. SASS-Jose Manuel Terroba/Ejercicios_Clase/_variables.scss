@@ -1,0 +1,22 @@
+$primary-font: Arial, sans-serif;
+$primary-color: #3498db;
+$secondary-color: pink;
+
+body {
+    font-family: $primary-font;
+}
+
+h1 {
+    color: $primary-color;
+}
+
+h2 {
+    color: $secondary-color;
+}
+
+$primary-font: Arial, sans-serif;
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$btn-bg-color: #3498db;
+$btn-text-color: #ffffff;
+$btn-hover-color: #2980b9;

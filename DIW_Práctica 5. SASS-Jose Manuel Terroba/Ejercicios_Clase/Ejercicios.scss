@@ -1,0 +1,49 @@
+@import "menu";
+@import "variables";
+@import "variables";
+
+$primary-color: pink;
+$body-color: lightblue;
+
+h1 {
+    background-color: $primary-color;
+}
+
+body {
+    background-color: $body-color;
+}
+
+p {
+    background-color: $primary-color;
+}
+
+@mixin container-style {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+// Aplicación del mixin en los contenedores
+.contenedor-hijo {
+    @include container-style;
+
+    img {
+        max-width: 100%;
+        border-radius: 0.25rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    @for $i from 1 through 3 {
+        .item-#{$i} {
+            &:hover {
+                border: 1px solid rgba(255, 0, 0, 0.2 * $i);
+            }
+        }
+    }
+}
